@@ -6,4 +6,7 @@
         insert into account (id,name,password) values(#{id},#{name},#{password})
     </insert>
 
+    <select id="login" resultType="Account">
+        select id,name,password from account where name =#{name} and name =#{password}
+    </select>
 </mapper>
