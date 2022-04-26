@@ -10,8 +10,13 @@ public class AccountService {
 
     @Autowired
     AccountMapper accountMapper;
+
     public Object addUser(Account account) {
         accountMapper.add(account);
         return "success";
+    }
+
+    public Object login(Account account) {
+        return accountMapper.login(account);
     }
 }
